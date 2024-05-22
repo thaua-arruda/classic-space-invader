@@ -33,4 +33,26 @@ export default class Player{
         }
 
     }
+    keydown = (event) => {
+        if(event.code == "ArrowRight") {
+            this.rightPressed = true;
+        }
+        if(event.code == "ArrowLeft") {
+            this.leftPressed = true;
+        }
+        if(event.code == "Space") {
+            this.shootPressed = true;    
+        }
+    }
+    keyup = (event) => {
+        if(event.code == "ArrowRight") {
+            this.rightPressed = false;
+        }
+        if(event.code == "ArrowLeft") {
+            this.leftPressed = false;
+        }
+        if(event.code == "Space") {
+            this.shootPressed = false;    
+        }
+    }
 }
