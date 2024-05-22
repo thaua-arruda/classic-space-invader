@@ -32,4 +32,5 @@ export default class Player{
             this.x = this.canvas.width - this.width;
         }
 
+    }
 }
