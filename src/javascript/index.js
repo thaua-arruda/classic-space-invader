@@ -27,8 +27,7 @@ let didWin = false;
 function checkGameOver() {
     if(isGameOver) 
         return;
-}
-     
+  
      if(enemyBulletController.collideWith(player)) {
         isGameOver = true;
      }
@@ -40,14 +39,15 @@ function checkGameOver() {
         didWin = true;
         isGameOver = true;
      }
+}
 
-     function displayGameOver() {
-        if(isGameOver) {
-            let text = didWin ? "Você ganhou!" : "Game Over";
-            let textOffset = didWin ? 5 : 3.6;
-            ctx.fillStyle = "white";
-            ctx.font = "35px 'Press Start 2P'"
-            ctx.fillText(text, canvas.width / textOffset, canvas.height / 2);
-        }
-     }
-         
+function displayGameOver() {
+    if(isGameOver) {
+        let text = didWin ? "Você ganhou!" : "Game Over";
+        let textOffset = didWin ? 5 : 3.6;
+        ctx.fillStyle = "white";
+        ctx.font = "35px 'Press Start 2P'"
+        ctx.fillText(text, canvas.width / textOffset, canvas.height / 2);
+    }
+}
+   
